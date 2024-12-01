@@ -7,6 +7,11 @@
   <title>My Account</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="txt.css">
+  <style>
+    #content p {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div id="main">
@@ -16,29 +21,29 @@
     
     <div id="top">
       <h3>
-        <i class="fas fa-user-circle" style="font-size:36px"></i>
+        <i class="fas fa-user-circle" style="font-size:36px;"></i>
         Welcome User
       </h3>
     </div>
     
     <div id="content">
       <h4 id="my-account">MY ACCOUNT</h4>
-      <p id="manage-product">
+      <p id="manage-product" onclick="navigate('manage-product.html')">
         <i class="fas fa-box" style="margin-right: 10px;"></i> Manage Products
       </p>
-      <p id="likes">
+      <p id="likes" onclick="navigate('likes.html')">
         <i class="fas fa-heart" style="margin-right: 10px;"></i> Likes
       </p>
-      <p id="notification">
+      <p id="notification" onclick="navigate('notifications.html')">
         <i class="fas fa-bell" style="margin-right: 10px;"></i> Notifications
       </p>
-      <p id="orders">
+      <p id="orders" onclick="navigate('order.html')">
         <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i> Orders
       </p>
-      <p id="settings">
+      <p id="settings" onclick="navigate('settings.html')">
         <i class="fas fa-cog" style="margin-right: 10px;"></i> Settings
       </p>
-      <p id="support">
+      <p id="support" onclick="navigate('support.html')">
         <i class="fas fa-headset" style="margin-right: 10px;"></i> ReSell Support
       </p>
       <p id="logout" onclick="logout()">
@@ -47,14 +52,22 @@
     </div>
   </div>
 
-  <!--
+.
+
+
   <script>
+    
+    function navigate(url) {
+      window.location.href = url;
+    }
+
+    
     function logout() {
       alert("You have been logged out!");
-      window.location.href = "login.html"; // Replace with login url
+      setTimeout(function(){
+      window.location.href = "signin.html";
+      }, 1500);
     }
   </script>
-  -->
-  
 </body>
 </html>
